@@ -1,6 +1,6 @@
 import { Icon } from '/core/ui/utilities/utilities-image.chunk.js';
 import { C as ComponentID } from '/core/ui/utilities/utilities-component-id.chunk.js';
-import { wondersScreenOptions, WondersModsBuildingInformationType } from '/wonders-screen/code/wonders-screen-options.js';
+import { wondersScreenOptions, WondersModsBuildingInformationType } from '/wonders-screen-continued/code/wonders-screen-options.js';
 
 export class WonderScreenModel {
     constructor() {

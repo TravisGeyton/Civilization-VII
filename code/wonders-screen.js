@@ -2,7 +2,7 @@ import { P as Panel } from '/core/ui/panel-support.chunk.js';
 import { D as Databind } from '/core/ui/utilities/utilities-core-databinding.chunk.js';
 import { b as InputEngineEventName } from '/core/ui/input/input-support.chunk.js';
 import { MustGetElement } from '/core/ui/utilities/utilities-dom.chunk.js';
-import { WonderScreenModel } from '/wonders-screen/code/wonders-screen-model.js';
+import { WonderScreenModel } from '/wonders-screen-continued/code/wonders-screen-model.js';
 
 class ScreenWonders extends Panel {
     constructor() {

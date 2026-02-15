@@ -2,9 +2,9 @@
 
 import '/core/ui/options/screen-options.js';  // make sure this loads first
 import { O as Options, a as OptionType, C as CategoryType } from '/core/ui/options/editors/index.chunk.js';
-import ModSettings from '/wonders-screen/code/mod-options-decorator.js';
+import ModSettings from '/wonders-screen-continued/code/mod-options-decorator.js';
 
-const MOD_ID = "wonders-screen";
+const MOD_ID = "wonders-screen-continued";
 
 export var WondersModsBuildingInformationType;
 (function (WondersModsBuildingInformationType) {
