@@ -93,7 +93,7 @@ if (!Controls.getDefinition('screen-natural-wonder-revealed-placard').hasOwnProp
 {
     Controls.getDefinition('screen-natural-wonder-revealed-placard').styles = [];
 }
-Controls.getDefinition('screen-natural-wonder-revealed-placard').styles.push("fs://game/detailed-wonder-cinematic/data/detailed-wonder-cinematic.css");
+Controls.getDefinition('screen-natural-wonder-revealed-placard').styles.push("fs://game/detailed-wonder-cinematic-continued/data/detailed-wonder-cinematic.css");
 
 // Constructed Wonders
 Controls.decorate('screen-wonder-complete-placard', (val) => new DetailedWonderCinematic_ConstructedWonderDecorator(val));
@@ -101,4 +101,4 @@ if (!Controls.getDefinition('screen-wonder-complete-placard').hasOwnProperty('st
 {
     Controls.getDefinition('screen-wonder-complete-placard').styles = [];
 }
-Controls.getDefinition('screen-wonder-complete-placard').styles.push("fs://game/detailed-wonder-cinematic/data/detailed-wonder-cinematic.css");
+Controls.getDefinition('screen-wonder-complete-placard').styles.push("fs://game/detailed-wonder-cinematic-continued/data/detailed-wonder-cinematic.css");
