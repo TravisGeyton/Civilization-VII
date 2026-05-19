@@ -1,6 +1,7 @@
 // Mod options decorator from: https://forums.civfanatics.com/threads/configuring-mod-options-with-a-dedicated-mods-tab.696784/
 
-import { d as CategoryData, C as CategoryType } from '/core/ui/options/editors/index.chunk.js';
+import { CategoryType } from '/core/ui/options/model-options.js';
+import { CategoryData } from '/core/ui/options/options-helpers.js';
 
 CategoryType["Mods"] = "mods";
 CategoryData[CategoryType.Mods] = {
