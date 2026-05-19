@@ -1,7 +1,7 @@
 // Mod options handling per https://forums.civfanatics.com/threads/configuring-mod-options-with-a-dedicated-mods-tab.696784/
 
 import '/core/ui/options/screen-options.js';  // make sure this loads first
-import { O as Options, a as OptionType, C as CategoryType } from '/core/ui/options/editors/index.chunk.js';
+import { Options, OptionType, CategoryType } from '/core/ui/options/model-options.js';
 import ModSettings from '/wonders-screen-continued/code/mod-options-decorator.js';
 
 const MOD_ID = "wonders-screen-continued";
