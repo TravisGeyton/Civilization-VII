@@ -1,5 +1,5 @@
-import { Icon } from '/core/ui/utilities/utilities-image.chunk.js';
-import { C as ComponentID } from '/core/ui/utilities/utilities-component-id.chunk.js';
+import { Icon } from '/core/ui/utilities/utilities-image.js';
+import { ComponentID } from '/core/ui/utilities/utilities-component-id.js';
 import { wondersScreenOptions, WondersModsBuildingInformationType } from '/wonders-screen-continued/code/wonders-screen-options.js';
 
 export class WonderScreenModel {
