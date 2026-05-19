@@ -1,5 +1,7 @@
-import { C as CinematicManager } from '/base-standard/ui/cinematic/cinematic-manager.chunk.js';
-import { MustGetElement } from '/core/ui/utilities/utilities-dom.chunk.js';
+import { CinematicManager } from '/base-standard/ui/cinematic/cinematic-manager.js';
+import { MustGetElement } from '/core/ui/utilities/utilities-dom.js';
+
+const MOD_CSS_PATH = "fs://game/detailed-wonder-cinematic-continued/data/detailed-wonder-cinematic.css";
 
 class DetailedWonderCinematic_WonderCompleteDecorator
 {
@@ -87,18 +89,22 @@ class DetailedWonderCinematic_ConstructedWonderDecorator extends DetailedWonderC
     }
 }
 
+function addStyleToDefinition(controlName) {
+    const def = Controls.getDefinition(controlName);
+    if (def) {
+        if (!def.styles) {
+            def.styles = [];
+        }
+        def.styles.push(MOD_CSS_PATH);
+    } else {
+        console.warn(`[Detailed Wonder Cinematic] Definition for '${controlName}' not found. CSS may not load.`);
+    }
+}
+
 // Natural Wonders
 Controls.decorate('screen-natural-wonder-revealed-placard', (val) => new DetailedWonderCinematic_NaturalWonderDecorator(val));
-if (!Controls.getDefinition('screen-natural-wonder-revealed-placard').hasOwnProperty('styles'))
-{
-    Controls.getDefinition('screen-natural-wonder-revealed-placard').styles = [];
-}
-Controls.getDefinition('screen-natural-wonder-revealed-placard').styles.push("fs://game/detailed-wonder-cinematic-continued/data/detailed-wonder-cinematic.css");
+addStyleToDefinition('screen-natural-wonder-revealed-placard');
 
 // Constructed Wonders
 Controls.decorate('screen-wonder-complete-placard', (val) => new DetailedWonderCinematic_ConstructedWonderDecorator(val));
-if (!Controls.getDefinition('screen-wonder-complete-placard').hasOwnProperty('styles'))
-{
-    Controls.getDefinition('screen-wonder-complete-placard').styles = [];
-}
-Controls.getDefinition('screen-wonder-complete-placard').styles.push("fs://game/detailed-wonder-cinematic-continued/data/detailed-wonder-cinematic.css");
+addStyleToDefinition('screen-wonder-complete-placard');
